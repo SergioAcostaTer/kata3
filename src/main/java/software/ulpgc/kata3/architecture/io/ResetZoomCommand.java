@@ -1,4 +1,7 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.architecture.io;
+
+import software.ulpgc.kata3.architecture.charts.Barchart;
+import software.ulpgc.kata3.architecture.charts.BarchartDisplay;
 
 public class ResetZoomCommand implements Command{
     private final Barchart barchart;

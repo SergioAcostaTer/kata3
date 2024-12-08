@@ -1,4 +1,6 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.windows;
+
+import software.ulpgc.kata3.architecture.io.Command;
 
 import javax.swing.*;
 import java.awt.*;

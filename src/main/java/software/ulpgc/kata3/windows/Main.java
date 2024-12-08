@@ -1,8 +1,13 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.windows;
+
+import software.ulpgc.kata3.architecture.*;
+import software.ulpgc.kata3.architecture.charts.Barchart;
+import software.ulpgc.kata3.architecture.io.FileTitleLoader;
+import software.ulpgc.kata3.architecture.io.ResetZoomCommand;
+import software.ulpgc.kata3.architecture.deserializer.TsvTitleDeserializer;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;

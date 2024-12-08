@@ -1,7 +1,9 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.architecture.deserializer;
 
 
-public class TsvTitleDeserializer implements TitleDeserializer{
+import software.ulpgc.kata3.architecture.Title;
+
+public class TsvTitleDeserializer implements TitleDeserializer {
 
     @Override
     public Title deserialize(String line) {

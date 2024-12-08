@@ -1,9 +1,10 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.windows;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
+import software.ulpgc.kata3.architecture.charts.Barchart;
 
 public class JFreeBarchartAdapter {
 
