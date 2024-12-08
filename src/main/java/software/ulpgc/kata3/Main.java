@@ -3,6 +3,7 @@ package software.ulpgc.kata3;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,13 +12,18 @@ public class Main {
         File file = new File("C:\\\\Users\\\\Sergio\\\\Desktop\\\\ULPGC\\\\is2\\\\imdb\\\\title.basics.tsv");
         List<Title> titles = new FileTitleLoader(file, new TsvTitleDeserializer()).load();
 
-        Map<String, Integer> stats = new HashMap<>();
+        Map<String, Integer> stats = new LinkedHashMap<>();
+        stats.put("0-30", 0);
+        stats.put("31-60", 0);
+        stats.put("61-90", 0);
+        stats.put("91-120", 0);
+        stats.put("121-150", 0);
+        stats.put("+150", 0);
 
         for(Title title: titles){
             String range = title.getRange();
             stats.put(range, stats.getOrDefault(range, 0)+1);
         }
-
         Barchart barchart = new Barchart("Titles Duration", "Duration Range", "Frequency");
         stats.forEach(barchart::add);
 
