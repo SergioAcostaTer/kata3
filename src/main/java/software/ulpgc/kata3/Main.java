@@ -18,6 +18,13 @@ public class Main {
             stats.put(range, stats.getOrDefault(range, 0)+1);
         }
 
-        stats.forEach((range, count) -> System.out.println(range + " -> " + count));
+        Barchart barchart = new Barchart("Titles Duration", "Duration Range", "Frequency");
+        stats.forEach(barchart::add);
+
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.put("resetZoom", new ResetZoomCommand(barchart, mainFrame.barchartDisplay()));
+        mainFrame.barchartDisplay().show(barchart);
+        mainFrame.setVisible(true);
+
     }
 }
